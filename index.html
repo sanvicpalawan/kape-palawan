@@ -12,11 +12,11 @@
 <meta property="og:url" content="https://kapepalawan.ph/" />
 <meta property="og:title" content="Kape Palawan | Fresh Roast, Island Flavor" />
 <meta property="og:description" content="Island-roasted coffee from Palawan. Single-origin Filipino beans, house-made pastries, and a warm terrace café in El Nido." />
-<meta property="og:image" content="https://picsum.photos/seed/kape-hero/1200/800" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1770123024506-f0f446f9a15c?auto=format&fit=crop&w=1200&q=80" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Kape Palawan | Fresh Roast, Island Flavor" />
 <meta name="twitter:description" content="Island-roasted coffee from Palawan. Single-origin Filipino beans, house-made pastries, and a warm terrace café." />
-<meta name="twitter:image" content="https://picsum.photos/seed/kape-hero/1200/800" />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1770123024506-f0f446f9a15c?auto=format&fit=crop&w=1200&q=80" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -443,7 +443,37 @@ ul { list-style: none; }
   .footer-inner { grid-template-columns: 1fr; }
   .frap { bottom: calc(1.5rem + 16px); right: 1.5rem; }
 }
+
+/* ---------- Scroll reveal (modern, fade-in on scroll) ---------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-content, .hero-badge, .btn-primary, .btn-secondary {
+  animation: heroIn .85s ease-out forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .hero-content, .hero-badge, .btn-primary, .btn-secondary { animation: none; }
+}
 </style>
+
+<script>
+  document.querySelectorAll('.fade-in').forEach(function(el){
+    if (el.getBoundingClientRect().top <= window.innerHeight - 6) {
+      el.classList.add('visible');
+    }
+  });
+</script>
 </head>
 <body>
 
@@ -465,7 +495,7 @@ ul { list-style: none; }
 <!-- Hero -->
 <section class="hero" id="top">
   <div class="hero-img">
-    <img src="https://picsum.photos/seed/kape-hero/900/680" alt="Steam rising from a cup of black coffee on a wooden table" />
+    <img src="https://images.unsplash.com/photo-1770123024506-f0f446f9a15c?auto=format&fit=crop&w=1600&q=80" alt="Steam rising from a cup of black coffee on a wooden table" />
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
@@ -484,7 +514,7 @@ ul { list-style: none; }
 
 <!-- Our Story (dark feature band) -->
 <section class="story-band" id="story">
-  <div class="story-inner">
+  <div class="story-inner fade-in">
     <div class="story-text">
       <p style="color:rgba(255,255,255,0.6);margin-bottom:14px;">From the palms of Palawan to your cup — this is how we do it.</p>
       <h2>Grown local. Roasted with care.</h2>
@@ -495,40 +525,40 @@ ul { list-style: none; }
         <div class="fact"><div class="num">100%</div><div class="lbl">Local Beans</div></div>
       </div>
     </div>
-    <div class="story-img">
-      <img src="https://picsum.photos/seed/kape-story/700/520" alt="Palawan coffee farm with palm trees" loading="lazy" />
+    <div class="story-img fade-in">
+      <img src="https://images.unsplash.com/photo-1667901126983-deac36c1e3c6?auto=format&fit=crop&w=1200&q=80" alt="Palawan coffee farm with palm trees" loading="lazy" />
     </div>
   </div>
 </section>
 
 <!-- Menu -->
 <section class="menu" id="menu">
-  <div class="menu-header">
+  <div class="menu-header fade-in">
     <h2>The Menu</h2>
     <p>Three ways to taste the islands.</p>
   </div>
-  <div class="categories">
+  <div class="categories fade-in">
     <!-- Espresso -->
-    <article class="category">
-      <div class="category-head">
+    <article class="category fade-in">
+      <div class="category-head fade-in">
         <div class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5C6.5 2.5 4 5.7 4 9.6c0 2 1.8 3.6 3.4 3.6.7 0 1.3-.2 1.8-.6l1.2 1.2c.3.9.1 1.9-.5 2.6-.5 1-.6 2.2-.2 3.2.3.8 1 1.4 1.9 1.4 1.5 0 2.7-1.2 2.7-2.7 0-1.2-1-2.1-2.4-2.1H10.6l1.4 1.4c.3.3.7.4 1.1.2.4-.2.7-.7.6-1.2z" fill="currentColor"/></svg></div>
         <div>
           <h3>Espresso</h3>
           <span class="count">6 items</span>
         </div>
       </div>
-      <div class="category-body">
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m1/300/300" alt="Single-origin espresso" loading="lazy" /></div>
+      <div class="category-body fade-in">
+        <div class="menu-grid fade-in">
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1744839196639-80ef7151d640?auto=format&fit=crop&w=400&q=80" alt="Single-origin espresso" loading="lazy" /></div>
             <div class="meta">
               <h4>Single Origin Espresso</h4>
               <p>Puerto Galera beans, 19:16 roast. Bright palm-salt finish.</p>
               <div class="price">₱120</div>
             </div>
           </div>
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m2/300/300" alt="Cortado in a glass cup" loading="lazy" /></div>
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1761271431053-f24b16e0a228?auto=format&fit=crop&w=400&q=80" alt="Cortado in a glass cup" loading="lazy" /></div>
             <div class="meta">
               <h4>Cortado</h4>
               <p>Equal parts espresso and steamed milk — the island classic.</p>
@@ -539,26 +569,26 @@ ul { list-style: none; }
       </div>
     </article>
     <!-- Local Brews -->
-    <article class="category">
-      <div class="category-head">
+    <article class="category fade-in">
+      <div class="category-head fade-in">
         <div class="icon" style="background:#FAF3E6;color:var(--gold);"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 2.5A2.5 2.5 0 017.5 5v2a1 1 0 001 1h4a1 1 0 001-1V5a2.5 2.5 0 012.5-2.5 2.5 2.5 0 012.5 2.5c0 1.4-1.1 2.5-2.5 2.5H7.5a2.5 2.5 0 01-2.5-2.5z" fill="currentColor"/><path d="M9 9h2v2h-2zM9 12h2v1H9z" fill="currentColor"/></svg></div>
         <div>
           <h3>Local Brews</h3>
           <span class="count">6 items</span>
         </div>
       </div>
-      <div class="category-body">
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m3/300/300" alt="Kapeng Barako in a cup" loading="lazy" /></div>
+      <div class="category-body fade-in">
+        <div class="menu-grid fade-in">
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1620842947093-284677c6c658?auto=format&fit=crop&w=400&q=80" alt="Kapeng Barako in a cup" loading="lazy" /></div>
             <div class="meta">
               <h4>Kapeng Barako</h4>
               <p>Philippine robusta, Benguet highlands. Bold, clean, familiar.</p>
               <div class="price">₱140</div>
             </div>
           </div>
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m4/300/300" alt="Cold brew in a glass" loading="lazy" /></div>
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1786431851375-a9490ba9d9ab?auto=format&fit=crop&w=400&q=80" alt="Cold brew in a glass" loading="lazy" /></div>
             <div class="meta">
               <h4>Cold Brew Concentrate</h4>
               <p>12-hour slow steep. Serve over ice or mix with milk.</p>
@@ -569,26 +599,26 @@ ul { list-style: none; }
       </div>
     </article>
     <!-- Pastries -->
-    <article class="category">
-      <div class="category-head">
+    <article class="category fade-in">
+      <div class="category-head fade-in">
         <div class="icon" style="background:#FAF3E6;color:#8A5A1F;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5C7 2.5 5.5 4.6 5.5 7c0 1.8 1.2 3.3 3 3.8.1 0 .2 0 .3.1-.1 0-.3-.1-.4-.1C8.6 12.6 7.4 13 6 13c-1.6 0-2.7-.8-2.7-2.3 0-1 .8-1.8 1.9-1.8H8.5c0 1.3-1.1 2.3-2.5 2.3z" fill="currentColor"/></svg></div>
         <div>
           <h3>Pastries</h3>
           <span class="count">6 items</span>
         </div>
       </div>
-      <div class="category-body">
-        <div class="menu-grid">
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m5/300/300" alt="Ensaymada" loading="lazy" /></div>
+      <div class="category-body fade-in">
+        <div class="menu-grid fade-in">
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1768884919998-ca36f3f8ef0d?auto=format&fit=crop&w=400&q=80" alt="Ensaymada" loading="lazy" /></div>
             <div class="meta">
               <h4>Ensaymada</h4>
               <p>Buttered, cinnamon, evaporated milk — best with a splash of coffee.</p>
               <div class="price">₱95</div>
             </div>
           </div>
-          <div class="menu-item">
-            <div class="img-box"><img src="https://picsum.photos/seed/kape-m6/300/300" alt="House-made tsokolate" loading="lazy" /></div>
+          <div class="menu-item fade-in">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1755884931646-ae6e1d227717?auto=format&fit=crop&w=400&q=80" alt="House-made tsokolate" loading="lazy" /></div>
             <div class="meta">
               <h4>Tsokolate (50 g)</h4>
               <p>Pili-nut tsokolate, house-made with roasted local beans.</p>
@@ -603,8 +633,8 @@ ul { list-style: none; }
 
 <!-- Contact -->
 <section class="contact" id="contact">
-  <div class="contact-grid">
-    <div class="contact-info">
+  <div class="contact-grid fade-in">
+    <div class="contact-info fade-in">
       <h2>Visit Us</h2>
       <p>We're on the west shore of El Nido — a short walk from the town jetty. Come for the coffee, stay for the view over the South China Sea.</p>
       <div class="contact-card">
@@ -620,7 +650,7 @@ ul { list-style: none; }
         <div><div class="lbl">WhatsApp</div><div class="val">+63 917 123 4567</div></div>
       </div>
     </div>
-    <div class="contact-map">
+    <div class="contact-map fade-in">
       <iframe
         title="Kape Palawan location in El Nido, Palawan"
         src="https://www.google.com/maps?q=El%20Nido%2C%20Palawan%2C%20Philippines&output=embed"
@@ -633,7 +663,7 @@ ul { list-style: none; }
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer fade-in">
   <div class="footer-inner">
     <div class="footer-brand">Kape Palawan</div>
     <div class="footer-col">
