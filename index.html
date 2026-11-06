@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kape Palawan | Fresh Roast, Island Flavor · El Nido, Palawan</title>
+<meta name="description" content="Kape Palawan — a small, island roaster in El Nido, Palawan. Single-origin Filipino beans, house-made pastries, and a warm terrace café experience." />
+<meta name="theme-color" content="#FDFBF7" />
+
+<!-- SEO / Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kapepalawan.ph/" />
+<meta property="og:title" content="Kape Palawan | Fresh Roast, Island Flavor" />
+<meta property="og:description" content="Island-roasted coffee from Palawan. Single-origin Filipino beans, house-made pastries, and a warm terrace café in El Nido." />
+<meta property="og:image" content="https://picsum.photos/seed/kape-hero/1200/800" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kape Palawan | Fresh Roast, Island Flavor" />
+<meta name="twitter:description" content="Island-roasted coffee from Palawan. Single-origin Filipino beans, house-made pastries, and a warm terrace café." />
+<meta name="twitter:image" content="https://picsum.photos/seed/kape-hero/1200/800" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --primary: #C05A46;
+  --primary-active: #A84A37;
+  --primary-disabled: #E8D9CD;
+  --ink: #2B2118;
+  --body: #4A3B30;
+  --muted: #7A6A5E;
+  --muted-soft: #9A8C7F;
+  --hairline: #E4D9CF;
+  --hairline-soft: #ECE3D2;
+  --canvas: #FDFBF7;
+  --card: #FFFFFF;
+  --card-warm: #FAF3E6;
+  --accent-dark: #2B2118;
+  --gold: #C9A227;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+  --radius-pill: 50px;
+  --section: 64px;
+  --space-base: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --font-sans: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--canvas);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: none; }
+
+/* ---------- Top nav ---------- */
+.top-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0; z-index: 60;
+  background: rgba(43, 33, 24, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand .dot { color: var(--primary); }
+.nav-links { display: flex; align-items: center; gap: var(--space-lg); }
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+.nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+.nav-cta {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 14px;
+}
+.nav-cta:hover { background: var(--primary-active); text-decoration: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.45fr 0.55fr;
+  height: 90vh;
+  min-height: 620px;
+  overflow: hidden;
+}
+.hero-img {
+  position: relative;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.hero-img:hover img { transform: scale(1.04); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43, 33, 24, 0.15), rgba(43, 33, 24, 0.72));
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: var(--space-lg);
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+  color: #fff;
+  max-width: 560px;
+}
+.hero h1 .accent { color: var(--primary); }
+.hero p.lead {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  margin-top: 14px;
+  line-height: 1.6;
+}
+.hero-actions { display: flex; gap: var(--space-sm); margin-top: 28px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
+  height: 56px;
+  box-shadow: 0 6px 18px rgba(192, 90, 70, 0.35);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn-primary:hover { background: var(--primary-active); text-decoration: none; transform: translateY(-2px); }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px 28px;
+  border-radius: var(--radius-pill);
+  height: 56px;
+  border: 1px solid var(--hairline);
+  transition: background 0.15s ease;
+}
+.btn-secondary:hover { background: var(--card-warm); text-decoration: none; }
+
+/* ---------- Our Story (espresso-dark feature band) ---------- */
+.story-band {
+  background: var(--accent-dark);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.story-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 40% at 80% 10%, rgba(192, 90, 70, 0.28), transparent 70%);
+}
+.story-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--section) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+.story-band h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin-bottom: 14px;
+}
+.story-band p { color: rgba(255, 255, 255, 0.82); margin-bottom: 22px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.fact {
+  text-align: center;
+  padding: var(--space-lg);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+}
+.fact .num { font-size: 26px; font-weight: 800; color: var(--primary); }
+.fact .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: rgba(255, 255, 255, 0.6); }
+
+/* ---------- Menu ---------- */
+.menu {
+  padding: var(--section) 0;
+  background: var(--canvas);
+}
+.menu-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl) var(--space-xl);
+  text-align: center;
+}
+.menu-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+.menu-header p { color: var(--muted); margin-top: 8px; }
+.categories {
+  max-width: 1280px;
+  margin: 36px auto 0;
+  padding: 0 var(--space-xl);
+  display: grid;
+  gap: var(--space-xl);
+}
+.category {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(43, 33, 24, 0.04);
+}
+.category-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--space-lg);
+  background: var(--card-warm);
+  border-bottom: 1px solid var(--hairline);
+}
+.category-head .icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--card-warm); display: flex; align-items: center; justify-content: center; color: var(--primary); }
+.category-head h3 { font-size: 18px; font-weight: 700; }
+.category-head .count { font-size: 12px; color: var(--muted); font-weight: 600; }
+.category-body { padding: var(--space-lg); }
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+.menu-item {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  padding: var(--space-lg);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.menu-item:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(43, 33, 24, 0.08); }
+.menu-item .img-box {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--hairline-soft);
+}
+.menu-item .img-box img { width: 100%; height: 100%; object-fit: cover; }
+.menu-item .meta { flex: 1; }
+.menu-item .meta h4 { font-size: 17px; font-weight: 700; }
+.menu-item .meta p { color: var(--body); font-size: 14px; margin-top: 4px; line-height: 1.5; }
+.menu-item .price {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  padding: var(--section) 0;
+  background: var(--canvas);
+}
+.contact-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-xl);
+}
+.contact-info h2 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  margin-bottom: 14px;
+}
+.contact-info p { color: var(--body); margin-bottom: 24px; }
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-lg) var(--space-xl);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  margin-bottom: 12px;
+}
+.contact-card .icon {
+  width: 44px; height: 44px; border-radius: var(--radius-sm);
+  background: var(--card-warm); color: var(--primary);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.contact-card .lbl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; }
+.contact-card .val { font-size: 16px; font-weight: 700; }
+.contact-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  background: var(--hairline-soft);
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: none;
+  display: block;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--accent-dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 48px 0 24px;
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-xl);
+}
+.footer-brand { color: #fff; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+.footer-col h4 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
+}
+.footer-col a { display: block; color: rgba(255, 255, 255, 0.7); font-size: 14px; padding: 5px 0; }
+.footer-col a:hover { color: var(--primary); }
+.footer-bottom {
+  max-width: 1280px;
+  margin: 32px auto 0;
+  padding: 0 var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- Frap floating CTA ---------- */
+.frap {
+  position: fixed;
+  bottom: calc(1.5rem + 32px);
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.24), 0 8px 12px rgba(0, 0, 0, 0.14);
+  transition: transform 0.15s ease;
+}
+.frap:hover { transform: scale(1.06); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .story-inner { grid-template-columns: 1fr; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .menu-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; height: auto; min-height: 500px; }
+  .hero-img { display: none; }
+  .hero-content { padding: var(--space-xl); }
+  .hero h1 { font-size: 30px; }
+  .facts { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .frap { bottom: calc(1.5rem + 16px); right: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top nav -->
+<header class="top-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="dot">●</span> Kape Palawan
+    </a>
+    <nav class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <a href="#menu" class="nav-cta">View Menu</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-img">
+    <img src="https://picsum.photos/seed/kape-hero/900/680" alt="Steam rising from a cup of black coffee on a wooden table" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--primary);"></span>
+      El Nido · Palawan
+    </div>
+    <h1>Taste the<br /><span class="accent">islands</span> in every cup</h1>
+    <p class="lead">Island-roasted coffee from Palawan — single-origin Filipino beans, house-made pastries, and a warm terrace to slow down and stay a while.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">View Menu <span>→</span></a>
+      <a href="#story" class="btn-secondary">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story (dark feature band) -->
+<section class="story-band" id="story">
+  <div class="story-inner">
+    <div class="story-text">
+      <p style="color:rgba(255,255,255,0.6);margin-bottom:14px;">From the palms of Palawan to your cup — this is how we do it.</p>
+      <h2>Grown local. Roasted with care.</h2>
+      <p>We buy directly from smallholder farmers in the lowlands of Palawan, then roast within two days of harvest. No filler beans, no middleman. Just Filipino cherry, cacao, and palm-salt brightness.</p>
+      <div class="facts">
+        <div class="fact"><div class="num">210</div><div class="lbl">Farmer Partners</div></div>
+        <div class="fact"><div class="num">48</div><div class="lbl">Hours from Farm to Roast</div></div>
+        <div class="fact"><div class="num">100%</div><div class="lbl">Local Beans</div></div>
+      </div>
+    </div>
+    <div class="story-img">
+      <img src="https://picsum.photos/seed/kape-story/700/520" alt="Palawan coffee farm with palm trees" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- Menu -->
+<section class="menu" id="menu">
+  <div class="menu-header">
+    <h2>The Menu</h2>
+    <p>Three ways to taste the islands.</p>
+  </div>
+  <div class="categories">
+    <!-- Espresso -->
+    <article class="category">
+      <div class="category-head">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5C6.5 2.5 4 5.7 4 9.6c0 2 1.8 3.6 3.4 3.6.7 0 1.3-.2 1.8-.6l1.2 1.2c.3.9.1 1.9-.5 2.6-.5 1-.6 2.2-.2 3.2.3.8 1 1.4 1.9 1.4 1.5 0 2.7-1.2 2.7-2.7 0-1.2-1-2.1-2.4-2.1H10.6l1.4 1.4c.3.3.7.4 1.1.2.4-.2.7-.7.6-1.2z" fill="currentColor"/></svg></div>
+        <div>
+          <h3>Espresso</h3>
+          <span class="count">6 items</span>
+        </div>
+      </div>
+      <div class="category-body">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m1/300/300" alt="Single-origin espresso" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Single Origin Espresso</h4>
+              <p>Puerto Galera beans, 19:16 roast. Bright palm-salt finish.</p>
+              <div class="price">₱120</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m2/300/300" alt="Cortado in a glass cup" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Cortado</h4>
+              <p>Equal parts espresso and steamed milk — the island classic.</p>
+              <div class="price">₱110</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Local Brews -->
+    <article class="category">
+      <div class="category-head">
+        <div class="icon" style="background:#FAF3E6;color:var(--gold);"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 2.5A2.5 2.5 0 017.5 5v2a1 1 0 001 1h4a1 1 0 001-1V5a2.5 2.5 0 012.5-2.5 2.5 2.5 0 012.5 2.5c0 1.4-1.1 2.5-2.5 2.5H7.5a2.5 2.5 0 01-2.5-2.5z" fill="currentColor"/><path d="M9 9h2v2h-2zM9 12h2v1H9z" fill="currentColor"/></svg></div>
+        <div>
+          <h3>Local Brews</h3>
+          <span class="count">6 items</span>
+        </div>
+      </div>
+      <div class="category-body">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m3/300/300" alt="Kapeng Barako in a cup" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Kapeng Barako</h4>
+              <p>Philippine robusta, Benguet highlands. Bold, clean, familiar.</p>
+              <div class="price">₱140</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m4/300/300" alt="Cold brew in a glass" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Cold Brew Concentrate</h4>
+              <p>12-hour slow steep. Serve over ice or mix with milk.</p>
+              <div class="price">₱150</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Pastries -->
+    <article class="category">
+      <div class="category-head">
+        <div class="icon" style="background:#FAF3E6;color:#8A5A1F;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2.5C7 2.5 5.5 4.6 5.5 7c0 1.8 1.2 3.3 3 3.8.1 0 .2 0 .3.1-.1 0-.3-.1-.4-.1C8.6 12.6 7.4 13 6 13c-1.6 0-2.7-.8-2.7-2.3 0-1 .8-1.8 1.9-1.8H8.5c0 1.3-1.1 2.3-2.5 2.3z" fill="currentColor"/></svg></div>
+        <div>
+          <h3>Pastries</h3>
+          <span class="count">6 items</span>
+        </div>
+      </div>
+      <div class="category-body">
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m5/300/300" alt="Ensaymada" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Ensaymada</h4>
+              <p>Buttered, cinnamon, evaporated milk — best with a splash of coffee.</p>
+              <div class="price">₱95</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="img-box"><img src="https://picsum.photos/seed/kape-m6/300/300" alt="House-made tsokolate" loading="lazy" /></div>
+            <div class="meta">
+              <h4>Tsokolate (50 g)</h4>
+              <p>Pili-nut tsokolate, house-made with roasted local beans.</p>
+              <div class="price">₱65</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Visit Us</h2>
+      <p>We're on the west shore of El Nido — a short walk from the town jetty. Come for the coffee, stay for the view over the South China Sea.</p>
+      <div class="contact-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4h14l-1 9H4L3 4z" fill="currentColor"/><path d="M3 4l3 7h6l3-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div><div class="lbl">Phone</div><div class="val">+63 917 123 4567</div></div>
+      </div>
+      <div class="contact-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h12c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none"/><polyline points="20,6 10,13 0,6"/></svg></div>
+        <div><div class="lbl">Email</div><div class="val">hello@kapepalawan.ph</div></div>
+      </div>
+      <div class="contact-card">
+        <div class="icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 13a8 8 0 018-8 8 8 0 010 16 8 8 0 01-8-8z" fill="none"/><circle cx="10" cy="10" r="2.5" fill="currentColor"/></svg></div>
+        <div><div class="lbl">WhatsApp</div><div class="val">+63 917 123 4567</div></div>
+      </div>
+    </div>
+    <div class="contact-map">
+      <iframe
+        title="Kape Palawan location in El Nido, Palawan"
+        src="https://www.google.com/maps?q=El%20Nido%2C%20Palawan%2C%20Philippines&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Kape Palawan</div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <a href="#contact">El Nido, Palawan, Philippines</a>
+      <a href="#contact">hello@kapepalawan.ph</a>
+      <a href="#contact">+63 917 123 4567</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <a href="#contact">Mon–Fri · 6am–8pm</a>
+      <a href="#contact">Sat–Sun · 6am–10pm</a>
+      <a href="#contact">Breakfast all day</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="#contact">Instagram</a>
+      <a href="#contact">Facebook</a>
+      <a href="#contact">TikTok</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Kape Palawan. Fictional café for the Philippines.</div>
+    <div>Roasted locally · El Nido, Palawan</div>
+  </div>
+</footer>
+
+<!-- Frap floating CTA -->
+<a class="frap" href="#menu" aria-label="Order menu">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 4h10l-1 4H8l-1-4zM6 9h12v2H6zM6 14h12v2H6z" fill="currentColor"/></svg>
+</a>
+
+</body>
+</html>

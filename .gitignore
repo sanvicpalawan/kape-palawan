@@ -1,0 +1,11 @@
+# Local environment — never commit
+.env
+.env.local
+.env.*.local
+
+# Dependencies / build output
+node_modules
+.build
+
+# OS / editor
+.DS_Store
